@@ -10,9 +10,6 @@
   "postCreateCommand": "cmake -DCMAKE_BUILD_TYPE=Debug . && make -j8",
   "workspaceFolder": "/home/SVF-tools/Teaching-Software-Analysis",
   "remoteUser": "root",
-  "mounts": [
-    "source=/home/xiao/project/Teaching-Software-Analysis-Xiao,target=/home/SVF-tools/Teaching-Software-Analysis,type=bind"
-  ],
   "customizations": {
     "vscode": {
       "extensions": [
