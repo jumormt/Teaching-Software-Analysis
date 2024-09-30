@@ -1,0 +1,31 @@
+{
+  "name": "C++ SVF Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "cmake -DCMAKE_BUILD_TYPE=Debug . && make -j8",
+  "workspaceFolder": "/home/SVF-tools/Teaching-Software-Analysis",
+  "remoteUser": "root",
+  "mounts": [
+    "source=/home/xiao/project/Teaching-Software-Analysis-Xiao,target=/home/SVF-tools/Teaching-Software-Analysis,type=bind"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",          // C++ IntelliSense and debugging
+        "twxs.cmake"                   // CMake integration
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "remoteEnv": {
+    "SVF_DIR": "/home/SVF-tools/SVF",
+    "LLVM_DIR": "/home/SVF-tools/SVF/llvm-16.0.0.obj",
+    "Z3_DIR": "/home/SVF-tools/SVF/z3.obj"
+  }
+}
+
